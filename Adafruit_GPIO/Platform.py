@@ -108,6 +108,9 @@ def pi_version():
     elif match.group(1) == 'BCM2835':
         # Pi 3 / Pi on 4.9.x kernel
         return 3
+    elif match.group(1) == 'BCM2711':
+        # Pi 4B
+        return 4
     else:
         # Something else, not a pi.
         return None
